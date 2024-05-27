@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visor de Token</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40rem;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .mensaje {
+            text-align: center;
+            padding: 2rem;
+            background-color: white;
+            border: solid 1px black;
+        }
+        .token {
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="mensaje">
+        <h1>Mi Token</h1>
+        <button id="fetchTokenBtn">Mostrar Token</button>
+        <p id="token" class="token"></p>
+    </div>
+    <script>
+        const token = document.getElementById('fetchTokenBtn')
+        token.addEventListener('click', function() {
+            fetch('/token')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('token').textContent = data.token;
+                });
+            })
+    </script>
+</body>
+</html>

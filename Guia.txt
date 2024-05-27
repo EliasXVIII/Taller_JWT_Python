@@ -1,0 +1,39 @@
+Verificar si esta instalado Virtualenv y la version 
+    - $ virtualenv --version
+Luego instalamos nuestro entorno virtual en donde este nuestro proyecto
+    - $ virtualenv venv
+Ahora activamos este entorno virtual
+    - $ source venv/bin/activate
+
+Ahora creamos un entorno con FastAPI
+    Revisamos la documentación
+    https://fastapi.tiangolo.com/es/
+
+ - $ pip install fastapi
+ - $ pip install "uvicorn[standard]"      [Este es el servidor]
+
+Para encriptar contraseñas
+    - $ mkpasswd 
+        Si no lo tienes instalado
+            - $ sudo apt install whois
+    - ** Ahora si puedes encriptar contraseñas
+    - $ mkpasswd -m help
+        Debería salir algo así
+            - Métodos disponibles:
+            yescrypt        Yescrypt
+            gost-yescrypt   GOST Yescrypt
+            scrypt          scrypt
+            bcrypt          bcrypt
+            bcrypt-a        bcrypt (obsolete $2a$ version)
+            sha512crypt     SHA-512
+            sha256crypt     SHA-256
+            sunmd5          SunMD5
+            md5crypt        MD5
+            bsdicrypt       BSDI extended DES-based crypt(3)
+            descrypt        standard 56 bit DES-based crypt(3)
+            nt              NT-Hash
+    - $ mkpasswd -m sha256crypt 123456
+    = $5$jP4yCV9u6v5ADeB/$Xi20u0rd1l/a82oIOfoJSG/4T7alexykswkWS/bkWlA
+
+
+
