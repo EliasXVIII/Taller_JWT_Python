@@ -11,6 +11,8 @@ Ahora creamos un entorno con FastAPI
 
  - $ pip install fastapi
  - $ pip install "uvicorn[standard]"      [Este es el servidor]
+ - para correr el servidor  
+    uvicorn main:app --reload
 
 Para encriptar contraseñas
     - $ mkpasswd 

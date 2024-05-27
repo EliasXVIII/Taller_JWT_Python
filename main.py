@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI
 import time
 from jose import jwt
 from fastapi.staticfiles import StaticFiles
@@ -14,11 +14,12 @@ caducidad = int(time.time()) + 240
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
+print("---------Token-------------")
 
 token = jwt.encode({"id":"1", "nombre": "Elias", "time": caducidad}, key=clave_secreta, algorithm="HS256")
 print(token)
 
-print("----------------------")
+print("---------Info-------------")
 
 token_resuelto = jwt.decode(token, key=clave_secreta, algorithms=["HS256"])
 print(token_resuelto)
