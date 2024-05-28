@@ -17,11 +17,13 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 print("---------Token-------------")
 
 token = jwt.encode({"id":"1", "nombre": "Elias", "time": caducidad}, key=clave_secreta, algorithm="HS256")
+
 print(token)
 
 print("---------Info-------------")
 
 token_resuelto = jwt.decode(token, key=clave_secreta, algorithms=["HS256"])
+
 print(token_resuelto)
 
 @app.get("/token")
