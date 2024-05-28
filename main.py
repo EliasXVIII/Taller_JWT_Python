@@ -10,7 +10,9 @@ clave_secreta = getenv("clave_secreta")
 
 app = FastAPI()
 
-caducidad = int(time.time()) + 240
+caducidad = int(time.time()) + 240 ###  + 240 
+print(type(caducidad))
+print(caducidad)
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
