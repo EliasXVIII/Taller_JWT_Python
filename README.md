@@ -26,6 +26,13 @@ Hemos realizado en el Bootcamp de FullStack de Peñascal F5 un taller introducto
 - **Swagger:** Hemos visto con FastAPI como se genera Swagger de manera automática.
 - **mkpasswd:** Hemos encriptado claves a traves de la consola de comando de linux mint con el comando mkpasswd y verificado con diferentes métodos de encriptación como SHA-512 MD5 scrypt
 
+## Ayuda 🎏
+- Adjunto en fomrato de txt una pequeña guía de ayuda con ayudas generales.
+
+
+## Clonar el repositorio   :octocat:
+  ```https://github.com/EliasXVIII/Taller_JWT_Python.git```
+  
   ## Autor 📫
 ![LINKEDIN](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)
 
