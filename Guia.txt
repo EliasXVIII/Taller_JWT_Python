@@ -37,5 +37,17 @@ Para encriptar contraseñas
     - $ mkpasswd -m sha256crypt 123456
     = $5$jP4yCV9u6v5ADeB/$Xi20u0rd1l/a82oIOfoJSG/4T7alexykswkWS/bkWlA
 
+Para crear un archivo .env y colocar la contraseña e importarla hacia main.py
+    # Instalamos la biblioteca para hacer esto.
+    - $ pip install python-dotenv
+
+Para crear el Front
+Importamos de FastAPI
+ - from fastapi.staticfiles import StaticFiles
+
+ app.mount("/static", StaticFiles(directory="static"), name="static")
+
+Corremos esto en 
+    - http://127.0.0.1:8000/static/index.html
 
 

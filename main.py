@@ -41,3 +41,4 @@ def verificar_token_route(token: str):
     payload = verificar_token(token)
     return payload
     
+##uvicorn main:app --reload
