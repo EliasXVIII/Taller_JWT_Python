@@ -33,12 +33,14 @@ def get_token():
     return {"token": token}
 
 def verificar_token(token):
-    payload = jwt.decode(token, clave_secreta, algorithms=["HS256"])
-    return payload
+    mensaje = jwt.decode(token, clave_secreta, algorithms=["HS256"])
+    return mensaje
 
 @app.post("/verificar/{token}")
 def verificar_token_route(token: str):
-    payload = verificar_token(token)
-    return payload
+    mensaje = verificar_token(token)
+    return mensaje
+
+## para visualizar el token en http://127.0.0.1:8000/static/index.html
     
 ##uvicorn main:app --reload
